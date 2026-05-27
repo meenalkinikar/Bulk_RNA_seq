@@ -30,6 +30,10 @@ conda config --add channels conda-forge
 conda install -c bioconda hisat2
 hisat2 --version
 
+Download gtf annotation file prior to quantification
+# wget http://ftp.ensembl.org/pub/release-106/gtf/homo_sapiens/Homo_sapiens.GRCh38.106.gtf.gz
+
+
 # featureCounts
 create and activate the conda environment if not done before
 conda create -n rnaseq python=3.11
