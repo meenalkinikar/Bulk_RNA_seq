@@ -1,0 +1,43 @@
+Install the following tools in you linux environment:
+
+# FastQC:
+sudo apt update
+sudo apt install fastqc
+To check version: fastqc --version
+
+# Trimmomatic:
+wget http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.39.zip
+unzip Trimmomatic-0.39.zip
+cd Trimmomatic-0.39/
+To check version: java -jar trimmomatic-0.39.jar -version
+(You can also download using conda/mamba)
+
+# Downnload indexed human genome:
+wget https://genome-idx.s3.amazonaws.com/hisat/grch38_genome.tar.gz
+
+# HISAT2
+Demo of installation using Conda
+Install Miniconda
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+source ~/.bashrc
+conda --version
+conda create -n rnaseq python=3.11
+conda activate rnaseq
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda install -c bioconda hisat2
+hisat2 --version
+
+# featureCounts
+create and activate the conda environment if not done before
+conda create -n rnaseq python=3.11
+conda activate rnaseq
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+
+conda install -c bioconda featureCounts
+featureCounts -h
+
