@@ -1,0 +1,19 @@
+# Output files
+aligned/
+counts/
+results/
+
+# Reference genome
+reference/
+
+# QC outputs
+*_fastqc.html
+*_fastqc.zip
+
+# Alignment files
+*.sam
+*.bam
+*.bai
+
+# Logs
+*.log
